@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#coding=utf-8
+# coding=utf-8
 
 """
 WeiXin message type
@@ -168,5 +168,5 @@ class WeiXinMessage():
             node.text = 'reply: ' + self.message['content']
             node = etree.SubElement(reply_msg, 'MsgType')
             node.text = reply_type
-            return etree.tostring(reply_msg)
+            return etree.tostring(reply_msg, encoding='utf-8')
             
